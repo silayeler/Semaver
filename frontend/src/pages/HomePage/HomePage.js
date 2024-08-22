@@ -48,7 +48,6 @@ function HomePage() {
           <div className="frame-label">Meyve</div>
         </div>
       </div>
-
       <div className="footer-space"></div>
     </div>
   );
