@@ -1,0 +1,108 @@
+/* Üst bar */
+.header {
+    width: 100%;
+    height: 60px; /* Mavi barın yüksekliği */
+    background-color: #506CEC;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box; /* Padding'i genişliğe dahil eder */
+    position: relative;
+}
+
+/* Logo hizalama */
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    top: 6%;
+    overflow: hidden;
+}
+
+/* Logo boyutu */
+.logo {
+    height: 90px; /* Logonun yüksekliği */
+    width: auto; /* Orantılı genişlik */
+    object-fit: contain; /* Logonun orantılı bir şekilde görünmesini sağlar */
+    background: linear-gradient(to right, #506CEC 50%, white 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Sağdaki linkler */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Linkler */
+.link {
+    color: white;
+    font-size: 16px; /* Yazı boyutu */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+    line-height: 30px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* İkonlar */
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* İkon ile yazı arasındaki mesafe */
+}
+
+/* Sepet yazısı */
+.cart-text {
+    color: white; /* Sepet yazısının beyaz olması */
+    font-size: 16px; /* Sepet yazısının diğer yazılarla aynı boyutta olması */
+}
+
+/* İkonların üzerine gelince gölgeleme efekti */
+.icon-home:hover,
+.icon-login:hover,
+.icon-cart-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hafif beyaz gölge */
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aynı gölgeleme efekti */
+}
+
+/* Navbar menüsü */
+.Header-nav {
+    display: flex;
+    justify-content: center; /* Menüyü ortalar */
+    padding: 20px 0;
+}
+
+.Header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Menü elemanlarını eşit aralıklarla yerleştirir */
+    width: 100%;
+    max-width: 1200px; /* Menü genişliğini sınırlayarak ortalamayı sağlar */
+}
+
+.Header-nav li {
+    color: #506CEC;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    flex: 1; /* Her bir menü öğesinin eşit genişlikte olmasını sağlar */
+}
+
+/* Aktif link için alt çizgi */
+.nav-link.active {
+    border-bottom: 2px solid #506CEC;
+}

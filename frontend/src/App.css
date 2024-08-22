@@ -1,0 +1,47 @@
+/* App.css */
+
+.App {
+    text-align: center;
+    background-color: white; /* Beyaz arka plan */
+    margin: 0; /* Sayfa kenar boşluklarını sıfırla */
+  }
+  
+  .App-header {
+    background-color: #506CEC; /* Çerçeve rengi */
+    height: 150px; /* Çerçeve yüksekliği */
+    width: 100%; /* Ekranın tamamını kapla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.App-logo {
+    width: 200px; /* Logonun genişliğini artırın */
+    height: auto; /* Oranları koruyarak yüksekliği otomatik ayarlayın */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ortala */
+}
+
+  
+  .header-right {
+    position: absolute;
+    right: 20px; /* Sağdan boşluk */
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right .icon {
+    color: white; /* Beyaz renk */
+    margin-left: 10px; /* İkonlar arasında boşluk */
+    text-decoration: none; /* Alt çizgi kaldır */
+  }
+  
+  header h1 {
+    color: white;
+    font-size: 24px; /* Başlık boyutu */
+    margin: 0;
+  }
+  

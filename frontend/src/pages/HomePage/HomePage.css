@@ -1,0 +1,42 @@
+/* Çerçeveler konteyneri */
+.frames-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Çerçeveleri ortalar */
+    gap: 60px 70px; /* Çerçeveler arasındaki boşluk, ilk değer dikey ikinci değer yatay */ 
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Tek bir çerçeve */
+.frame {
+    width: calc(30% - 90px); /* 3 sütun düzeni için genişlik ayarı */
+    height: 225px; /* Çerçeve yüksekliği */
+    border: 3px solid #506CEC; /* Mavi kenar */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative; /* Çerçeve konumlandırması için */
+}
+
+/* Resimler */
+.frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Metin başlığı */
+.frame-label {
+    position: absolute; /* Mutlak konumlandırma */
+    left: -150px; /* Çerçevenin soluna hizalar */
+    top: 50%; /* Yüksekliğin ortasına hizalar */
+    transform: translateY(-50%); /* Yüksekliği ortalar */
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    white-space: nowrap; /* Tek satırda kalmasını sağlar */
+}
