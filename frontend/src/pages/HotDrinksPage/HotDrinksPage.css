@@ -1,38 +1,38 @@
+/* HotDrinksPage.css */
 .frames-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px 50px; /* Aralarındaki boşluğu azaltıyoruz */
+    justify-content: space-around;
     padding: 10px;
-    margin-top: 20px; /* Üstteki boşluğu azaltıyoruz */
-}
-
-.frame {
-    width: calc(25% - 30px); /* Çerçeveleri daha küçük yapıyoruz */
-    height: 170px; /* Çerçevelerin yüksekliğini orantılı olarak küçültüyoruz */
-    border: 2px solid #506CEC; /* Kenar kalınlığını azaltıyoruz */
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    cursor: pointer;
+  }
+  
+  .frame {
     position: relative;
-}
-
-.frame img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.frame-label {
-    position: absolute;
-    left: -120px; /* Yazıların sol taraftan çıkıntısını biraz azaltıyoruz */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px; /* Yazı boyutunu küçültüyoruz */
+    width: 150px; /* Genişlik ayarını HomePage'deki ile uyumlu hale getirin */
+    height: 150px; /* Yükseklik ayarını HomePage'deki ile uyumlu hale getirin */
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #ccc; /* Çerçeve rengi ve genişliği HomePage'deki ile uyumlu hale getirin */
+    border-radius: 10px;
+    overflow: hidden;
     text-align: center;
-    color: #333;
-    white-space: nowrap;
-}
+    background-color: #f9f9f9; /* Arka plan rengi HomePage'deki ile uyumlu hale getirin */
+  }
+  
+  .frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resim boyutunu kapsayıcıya sığdırır */
+  }
+  
+  .frame-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Etiket arka plan rengi */
+    color: white; /* Etiket metin rengi */
+    padding: 5px;
+    text-align: center;
+  }
+  

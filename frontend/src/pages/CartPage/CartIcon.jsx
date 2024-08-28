@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IconButton, Popover, Typography, Badge, List, ListItem, ListItemText } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useSelector } from 'react-redux';
+import { blueGrey } from '@mui/material/colors';
 
 function CartIcon() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -52,13 +53,13 @@ function CartIcon() {
                 </ListItem>
               ))
             ) : (
-              <ListItem>Sepetiniz boş.</ListItem>
+              <ListItem>Sepetiniz Boş.</ListItem>
             )}
           </List>
           {cartItems.length > 0 && (
             <div style={{ marginTop: '10px', textAlign: 'right' }}>
               <Typography variant="body2">
-                <a href="/cart">Sepete Git</a>
+                <a href="/cart" >Sepete Git</a>
               </Typography>
             </div>
           )}

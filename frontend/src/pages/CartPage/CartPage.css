@@ -1,18 +1,48 @@
+/* src/pages/CartPage/CartPage.css */
+
 .cart-page {
-    padding: 20px;
-  }
-  
-  .cart-page h1 {
-    margin-bottom: 20px;
-  }
-  
-  .cart-page ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .cart-page li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
+  padding: 20px;
+}
+
+.cart-page h1 {
+  margin-bottom: 20px;
+  color: rgba(67, 96, 210, 0.8);
+}
+
+.frames-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.item-frame {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px; /* İsteğe bağlı genişlik */
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-details {
+  margin-top: 10px;
+}
+
+.order-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #506CEC;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-button:hover {
+  background-color: #4054b9;
+}

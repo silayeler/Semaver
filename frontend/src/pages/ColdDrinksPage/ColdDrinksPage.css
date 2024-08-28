@@ -1,0 +1,38 @@
+.frames-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 50px; /* Aralarındaki boşluğu azaltıyoruz */
+    padding: 10px;
+    margin-top: 20px; /* Üstteki boşluğu azaltıyoruz */
+}
+
+.frame {
+    width: calc(25% - 30px); /* Çerçeveleri daha küçük yapıyoruz */
+    height: 170px; /* Çerçevelerin yüksekliğini orantılı olarak küçültüyoruz */
+    border: 2px solid #506CEC; /* Kenar kalınlığını azaltıyoruz */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.frame-label {
+    position: absolute;
+    left: -120px; /* Yazıların sol taraftan çıkıntısını biraz azaltıyoruz */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px; /* Yazı boyutunu küçültüyoruz */
+    text-align: center;
+    color: #333;
+    white-space: nowrap;
+}

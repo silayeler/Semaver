@@ -14,41 +14,40 @@ function HomePage() {
         <div className="frame">
           <a href="/hot-drinks">
             <img src={hotDrinksPic} alt="Sıcak İçecekler" />
+            <div className="frame-label">Sıcak İçecekler</div>
           </a>
-          <div className="frame-label">Sıcak İçecekler</div>
         </div>
         <div className="frame">
           <a href="/cold-drinks">
             <img src={coldDrinksPic} alt="Soğuk İçecekler" />
+            <div className="frame-label">Soğuk İçecekler</div>
           </a>
-          <div className="frame-label">Soğuk İçecekler</div>
         </div>
         <div className="frame">
           <a href="/soda">
             <img src={sodaPic} alt="Soda" />
+            <div className="frame-label">Soda</div>
           </a>
-          <div className="frame-label">Soda</div>
         </div>
         <div className="frame">
           <a href="/water">
             <img src={waterPic} alt="Su" />
+            <div className="frame-label">Su</div>
           </a>
-          <div className="frame-label">Su</div>
         </div>
         <div className="frame">
           <a href="/snacks">
             <img src={snacksPic} alt="Atıştırmalık" />
+            <div className="frame-label">Atıştırmalık</div>
           </a>
-          <div className="frame-label">Atıştırmalık</div>
         </div>
         <div className="frame">
           <a href="/new-category">
             <img src={newPic} alt="Meyve" />
+            <div className="frame-label">Meyve</div>
           </a>
-          <div className="frame-label">Meyve</div>
         </div>
       </div>
-      <div className="footer-space"></div>
     </div>
   );
 }

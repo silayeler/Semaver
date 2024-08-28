@@ -1,6 +1,9 @@
+// src/pages/CartPage/CartPage.js
+
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './CartPage.css';
+import salepImage from '../../assets/salep.jpg'; // Resmi içe aktarın
 
 function CartPage() {
   const cartItems = useSelector((state) => state.cart);
@@ -8,15 +11,23 @@ function CartPage() {
   return (
     <div className="cart-page">
       <h1>Sepetiniz</h1>
-      <ul>
+      <div className="frames-container">
         {cartItems.length > 0 ? (
           cartItems.map((item, index) => (
-            <li key={index}>{item.name}</li>
+            <div key={index} className="item-frame">
+              <img src={salepImage} alt={item.name} className="item-image" />
+              <div className="item-details">
+                <h2>{item.name}</h2>
+                <p>Adet: {item.quantity}</p>
+                <p>Fiyat: {item.price} TL</p>
+              </div>
+            </div>
           ))
         ) : (
-          <li>Sepetiniz boş.</li>
+          <p>Sepetiniz boş.</p>
         )}
-      </ul>
+      </div>
+      <button className="order-button">Sipariş Ver</button>
     </div>
   );
 }

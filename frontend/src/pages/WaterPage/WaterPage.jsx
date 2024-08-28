@@ -1,10 +1,44 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { Snackbar, Alert } from '@mui/material';
+import cayPic from '../../assets/elmaciksu-cunku-dogal-mineralli.jpg';
 
 
 function WaterPage() {
+  const dispatch = useDispatch();
+  const [open, setOpen] = React.useState(false);
+  const [message, setMessage] = React.useState('');
+
+  const addToCart = (item) => {
+    dispatch({ type: 'ADD_ITEM', payload: item });
+    setMessage(`${item.name} sepete eklendi!`);
+    setOpen(true);
+  };
+
+ const handleClose = () => {
+    setOpen(false);
+  }; 
+
+  const items = [
+    { name: 'Su', image: cayPic },
+  ];
+
   return (
     <div>
-        <h1>Sılay</h1>
+      <div className="frames-container">
+        {items.map((item, index) => (
+          <div key={index} className="frame" onClick={() => addToCart({ ...item, quantity: 1 })}>
+            <img src={item.image} alt={item.name} />
+            <div className="frame-label">{item.name}</div>
+          </div>
+        ))}
+      </div>
+
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          {message}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }

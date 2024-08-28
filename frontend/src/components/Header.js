@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, IconButton, Badge } from '@mui/material';
-import Logo from "../assets/logo.webp";
+import Logo from "../assets/logo.png";
 import HomeIcon from "../assets/Group.png";
 import LoginIcon from "../assets/Group 6.png";
 import CartIcon from "../assets/Group 5.png";
@@ -10,8 +10,9 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: 'Ürün 1', quantity: 1 },
-    { id: 2, name: 'Ürün 2', quantity: 2 },
+    { id: 1, name: 'Çay', quantity: 1 },
+    { id: 2, name: 'Limonlu Soda', quantity: 2 },
+    { id: 3, name: 'Türk Kahvesi', quantity: 3 },
   ]);
 
   const handleDropdownOpen = (dropdown) => {
@@ -156,20 +157,62 @@ const Header = () => {
         }}
       >
         {cartItems.map((item) => (
-          <MenuItem key={item.id}>
-            {item.name}
-            <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-              <button onClick={() => decreaseQuantity(item)}>-</button>
-              <span>{item.quantity}</span>
-              <button onClick={() => increaseQuantity(item)}>+</button>
-            </div>
-          </MenuItem>
+         <MenuItem key={item.id}>
+         {item.name}
+         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
+           <button
+             onClick={() => decreaseQuantity(item)}
+             style={{
+               backgroundColor: '#506CEC', /* Mavi arka plan rengi */
+               color: 'white', /* Beyaz yazı rengi */
+               border: 'none', /* Kenarlık kaldırma */
+               padding: '5px 10px', /* İç boşluk */
+               borderRadius: '5px', /* Köşe yuvarlama */
+               cursor: 'pointer', /* İmleç şekli */
+               fontSize: '16px', /* Yazı boyutu */
+               margin: '0 5px', /* Butonlar arası boşluk */
+             }}
+           >
+             -
+           </button>
+           <span style={{ margin: '0 10px' }}>{item.quantity}</span>
+           <button
+             onClick={() => increaseQuantity(item)}
+             style={{
+               backgroundColor: '#506CEC', /* Mavi arka plan rengi */
+               color: 'white', /* Beyaz yazı rengi */
+               border: 'none', /* Kenarlık kaldırma */
+               padding: '5px 10px', /* İç boşluk */
+               borderRadius: '5px', /* Köşe yuvarlama */
+               cursor: 'pointer', /* İmleç şekli */
+               fontSize: '16px', /* Yazı boyutu */
+               margin: '0 5px', /* Butonlar arası boşluk */
+             }}
+           >
+             +
+           </button>
+         </div>
+       </MenuItem>
+       
         ))}
-        <MenuItem onClick={handleClose}>
-          <a href="/cart" style={{ width: '100%', textAlign: 'center' }}>
-            <button>Sepete Git</button>
-          </a>
-        </MenuItem>
+      <MenuItem onClick={handleClose}>
+  <a href="/cart" style={{ width: '100%', textAlign: 'center', textDecoration: 'none' }}>
+    <button
+      style={{
+        backgroundColor: '#506CEC', /* Arka plan rengi */
+        color: 'white', /* Yazı rengi */
+        border: 'none', /* Kenarlık kaldırma */
+        padding: '10px 20px', /* İç boşluk */
+        borderRadius: '5px', /* Köşe yuvarlama */
+        cursor: 'pointer', /* İmleç şekli */
+        fontSize: '16px', /* Yazı boyutu */
+      }}
+    >
+      Sepete Git
+    </button>
+  </a>
+</MenuItem>
+
       </Menu>
     </>
   );

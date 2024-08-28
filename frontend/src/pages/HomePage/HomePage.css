@@ -1,45 +1,45 @@
+/* HomePage.css */
 .frames-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Çerçeveleri ortalar */
-    gap: 60px 70px; /* Çerçeveler arasındaki boşluk, ilk değer dikey ikinci değer yatay */ 
+    justify-content: space-around;
     padding: 10px;
-    margin-top: 30px;
 }
 
-/* Tek bir çerçeve */
 .frame {
-    width: calc(30% - 90px); /* 3 sütun düzeni için genişlik ayarı */
-    height: 225px; /* Çerçeve yüksekliği */
-    border: 3px solid #506CEC; /* Mavi kenar */
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    position: relative;
+    width: 150px; /* Genişlik ayarını HotDrinksPage'deki ile uyumlu hale getirin */
+    height: 150px; /* Yükseklik ayarını HotDrinksPage'deki ile uyumlu hale getirin */
+    margin: 10px;
     cursor: pointer;
-    position: relative; /* Çerçeve konumlandırması için */
+    border: 2px solid #ccc; /* Çerçeve rengi ve genişliği HotDrinksPage'deki ile uyumlu hale getirin */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f9f9f9; /* Arka plan rengi HotDrinksPage'deki ile uyumlu hale getirin */
 }
 
-/* Resimler */
 .frame img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    object-fit: cover; /* Resim boyutunu kapsayıcıya sığdırır */
 }
 
-/* Metin başlığı */
 .frame-label {
-    position: absolute; /* Mutlak konumlandırma */
-    bottom: 10px; /* Çerçevenin altına hizalar */
-    left: 50%; /* Orta hizalar */
-    transform: translateX(-50%); /* Yatayda ortalar */
-    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Etiket arka plan rengi */
+    color: white; /* Etiket metin rengi */
+    padding: 5px;
     text-align: center;
+}
+
+.text-section {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 18px;
     color: #333;
-    background: rgba(255, 255, 255, 0.7); /* Arka plan rengi ve şeffaflık */
-    padding: 5px; /* İç boşluk */
-    border-radius: 5px; /* Köşe yuvarlaklığı */
-    width: 100%; /* Başlığı çerçevenin tamamına yayar */
-    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil eder */
 }
