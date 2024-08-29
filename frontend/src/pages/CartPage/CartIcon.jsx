@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IconButton, Popover, Typography, Badge, List, ListItem, ListItemText } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useSelector } from 'react-redux';
-import { blueGrey } from '@mui/material/colors';
+
 
 function CartIcon() {
   const [anchorEl, setAnchorEl] = useState(null);
