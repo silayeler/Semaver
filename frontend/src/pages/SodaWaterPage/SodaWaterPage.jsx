@@ -1,6 +1,8 @@
-import React from 'react';
+// pages/SodaWaterPage.jsx
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Snackbar, Alert } from '@mui/material';  
+import { Snackbar, Alert } from '@mui/material';
+import ProductModal from '../../components/ProductModal'; // Modal bileşenini içe aktar
 import sadeSodaPic from '../../assets/mocha.jpg';
 import limonluSodaPic from '../../assets/mocha.jpg';
 import elmaliSodaPic from '../../assets/mocha.jpg';
@@ -8,19 +10,29 @@ import ananasMangoSodaPic from '../../assets/mocha.jpg';
 import karadutSodaPic from '../../assets/mocha.jpg';
 import portakalliSodaPic from '../../assets/mocha.jpg';
 
+
 function SodaWaterPage() {
   const dispatch = useDispatch();
-  const [open, setOpen] = React.useState(false);
-  const [message, setMessage] = React.useState('');
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [message, setMessage] = useState('');
+  const [selectedItem, setSelectedItem] = useState(null); // Seçilen ürünü saklamak için
 
-  const addToCart = (item) => {
+  const handleAddToCart = (item) => {
     dispatch({ type: 'ADD_ITEM', payload: item });
-    setMessage(`${item.name}  sepete eklendi!`);
-    setOpen(true);
+    setMessage(`${item.name} sepete eklendi!`);
+    setOpenSnackbar(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleOpenModal = (item) => {
+    setSelectedItem(item);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
   };
 
   const items = [
@@ -30,28 +42,35 @@ function SodaWaterPage() {
     { name: 'Mango-Ananas Soda', image: ananasMangoSodaPic },
     { name: 'Karadutlu Soda', image: karadutSodaPic },
     { name: 'Portakallı Soda', image: portakalliSodaPic },
-
   ];
 
   return (
     <div>
       <div className="frames-container">
         {items.map((item, index) => (
-          <div key={index} className="frame" onClick={() => addToCart({ ...item, quantity: 1 })}>
+          <div key={index} className="frame" onClick={() => handleOpenModal(item)}>
             <img src={item.image} alt={item.name} />
             <div className="frame-label">{item.name}</div>
           </div>
         ))}
       </div>
 
-      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success">
+      {selectedItem && (
+        <ProductModal
+          open={!!selectedItem}
+          handleClose={handleCloseModal}
+          item={selectedItem}
+          addToCart={handleAddToCart}
+        />
+      )}
+
+      <Snackbar open={openSnackbar} autoHideDuration={3000} onClose={handleCloseSnackbar}>
+        <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
           {message}
         </Alert>
       </Snackbar>
     </div>
   );
 }
-
 
 export default SodaWaterPage;
