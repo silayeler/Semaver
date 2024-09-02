@@ -1,9 +1,7 @@
-// src/index.js
-
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // 'react-dom' yerine 'react-dom/client' içe aktarın
+import ReactDOM from 'react-dom/client'; 
 import { Provider } from 'react-redux';
-import store from './store'; // Güncellenmiş store'u içe aktar
+import store from './store'; 
 import App from './App';
 import './index.css';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, MenuItem, IconButton, Badge } from '@mui/material';
+import { Menu, MenuItem, IconButton, Badge } from '@mui/material'; /* css frameworkunü importladık */
 import Logo from "../assets/logo.png";
 import HomeIcon from "../assets/Group.png";
 import LoginIcon from "../assets/Group 6.png";
@@ -8,13 +8,14 @@ import './Header.css';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [cartItems, setCartItems] = useState([
+  const [openDropdown, setOpenDropdown] = useState(null); /*openDropdown, hangi açılır menünün açık olduğunu belirtir.*/
+  const [cartItems, setCartItems] = useState([ /*cartItems, sepetteki ürünlerin bir listesidir. */
     { id: 1, name: 'Çay', quantity: 1 },
     { id: 2, name: 'Limonlu Soda', quantity: 2 },
     { id: 3, name: 'Türk Kahvesi', quantity: 3 },
   ]);
 
+  /*fonksiyonlar*/
   const handleDropdownOpen = (dropdown) => {
     setOpenDropdown(dropdown);
   };
@@ -31,19 +32,19 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-  const increaseQuantity = (item) => {
+  const increaseQuantity = (item) => { /*sepet ürünlerinin miktarını artırma azaltma */
     setCartItems((prevItems) =>
       prevItems.map((i) => (i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i))
     );
   };
 
-  const decreaseQuantity = (item) => {
+  const decreaseQuantity = (item) => { /*azaltma */
     setCartItems((prevItems) =>
       prevItems.map((i) => (i.id === item.id && i.quantity > 1 ? { ...i, quantity: i.quantity - 1 } : i))
     );
   };
 
-  return (
+  return ( /*jsx render kısmı */
     <>
       <header className="header">
         <div className="logo-container">

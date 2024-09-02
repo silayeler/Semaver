@@ -52,15 +52,15 @@
 }
 
 .cart-item-details h2 {
-  font-size: 1.5em; /* Ürün adını büyüttük */
+  font-size: 1.5em; 
   margin: 0;
-  color: #506CEC; /* Yazı rengi mavi */
+  color: #506CEC; 
 }
 
 .cart-item-details p {
   margin: 5px 0;
   font-size: 1em;
-  color: #506CEC; /* Yazı rengi mavi */
+  color: #506CEC; 
 }
 
 .quantity-control {
@@ -70,24 +70,23 @@
 }
 
 .quantity-control button {
-  background-color: #506CEC; /* Mavi buton rengi */
-  color: #fff; /* Beyaz metin rengi */
-  border: none;
+  background-color: #506CEC; 
+  color: #fff; 
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
 }
 
 .quantity-control span {
-  font-size: 1.2em; /* Adet yazısını büyüttük */
-  color: #506CEC; /* Yazı rengi mavi */
+  font-size: 1.2em; 
+  color: #506CEC; 
 }
 
 .order-button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #506CEC; /* Mavi buton rengi */
-  color: #fff; /* Beyaz metin rengi */
+  background-color: #506CEC; 
+  color: #fff; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -95,5 +94,5 @@
 }
 
 .order-button:hover {
-  background-color: #4052b4; /* Hover etkisi için koyu mavi renk */
+  background-color: #4052b4; /* Hover etkisi için koyu mavi renk, hover olduğu belli olsun diye  */
 }

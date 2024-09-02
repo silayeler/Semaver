@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux'; // Provider'ı import edin
-import store from './store'; // Store'u import edin
+import { Provider } from 'react-redux'; 
+import store from './store'; 
 import HomePage from './pages/HomePage/HomePage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import CartPage from './pages/CartPage/CartPage';
@@ -16,10 +16,10 @@ import './App.css';
 
 function App() {
   return (
-    <Provider store={store}> {/* Provider ile store'u sağla */}
+    <Provider store={store}> {}
       <Router>
         <div className="App">
-          <Header /> {/* Header bileşenini ekle */}
+          <Header /> {}
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />

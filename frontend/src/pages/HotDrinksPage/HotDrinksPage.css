@@ -8,15 +8,15 @@
   
   .frame {
     position: relative;
-    width: 150px; /* Genişlik ayarını HomePage'deki ile uyumlu hale getirin */
-    height: 150px; /* Yükseklik ayarını HomePage'deki ile uyumlu hale getirin */
+    width: 150px; 
+    height: 150px; 
     margin: 10px;
     cursor: pointer;
-    border: 2px solid #ccc; /* Çerçeve rengi ve genişliği HomePage'deki ile uyumlu hale getirin */
+    border: 2px solid #ccc; 
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    background-color: #f9f9f9; /* Arka plan rengi HomePage'deki ile uyumlu hale getirin */
+    background-color: #f9f9f9;
   }
   
   .frame img {

@@ -17,8 +17,8 @@
 }
 
 .App-logo {
-    width: 200px; /* Logonun genişliğini artırın */
-    height: auto; /* Oranları koruyarak yüksekliği otomatik ayarlayın */
+    width: 200px; 
+    height: auto; 
     position: absolute;
     top: 50%;
     left: 50%;

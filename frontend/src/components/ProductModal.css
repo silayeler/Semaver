@@ -1,9 +1,10 @@
+/* Modal içerik */
 .modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 90%; /* Ekran genişliğine uyum sağlar */
   max-width: 400px;
   background-color: white;
   padding: 20px;
@@ -12,6 +13,7 @@
   position: relative;
 }
 
+/* Modal resim */
 .modal-image {
   width: 100%;
   height: auto;
@@ -21,6 +23,7 @@
   object-fit: contain;
 }
 
+/* Kapatma butonu */
 .close-button {
   position: absolute;
   top: 10px;
@@ -38,11 +41,25 @@
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Kapatma butonu hover efekti */
 .close-button:hover {
-  background-color:#1976d2;
+  background-color: #1976d2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Kapatma butonu focus efekti */
 .close-button:focus {
   outline: none;
+}
+
+/* Medya sorguları */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%; /* Daha küçük ekranlarda genişlik artışı */
+    max-width: none; /* Maksimum genişlik kısıtlamasını kaldır */
+  }
+
+  .modal-image {
+    max-height: 150px; /* Daha küçük ekranlarda resim yüksekliği */
+  }
 }

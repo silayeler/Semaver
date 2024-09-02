@@ -1,30 +1,37 @@
 /* HomePage.css */
+
+/* Genel kaplama */
 .frames-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
+    gap: 10px; /* Çerçeveler arasındaki boşluk */
 }
 
+/* Her bir çerçeve */
 .frame {
     position: relative;
-    width: 150px; /* Genişlik ayarını HotDrinksPage'deki ile uyumlu hale getirin */
-    height: 150px; /* Yükseklik ayarını HotDrinksPage'deki ile uyumlu hale getirin */
+    width: 150px; /* Genişlik */
+    height: 150px; /* Yükseklik */
     margin: 10px;
     cursor: pointer;
-    border: 2px solid #ccc; /* Çerçeve rengi ve genişliği HotDrinksPage'deki ile uyumlu hale getirin */
+    border: 2px solid #ccc; /* Çerçeve rengi */
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    background-color: #f9f9f9; /* Arka plan rengi HotDrinksPage'deki ile uyumlu hale getirin */
+    background-color: #f9f9f9; /* Arka plan rengi */
+    box-sizing: border-box; /* Padding ve border'ı toplam genişliğe dahil et */
 }
 
+/* Resim */
 .frame img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Resim boyutunu kapsayıcıya sığdırır */
 }
 
+/* Etiket */
 .frame-label {
     position: absolute;
     bottom: 0;
@@ -36,10 +43,43 @@
     text-align: center;
 }
 
+/* Metin bölümü */
 .text-section {
     display: block;
     margin: 20px auto;
     text-align: center;
     font-size: 18px;
     color: #333;
+}
+
+/* Medya sorguları */
+
+/* Küçük ekranlar (tabletler) */
+@media (max-width: 768px) {
+    .frames-container {
+        justify-content: center; /* Ortalamayı sağlar */
+        gap: 10px; /* Çerçeveler arasındaki boşluk */
+    }
+
+    .frame {
+        width: 120px; /* Küçük ekranlarda çerçeve genişliği */
+        height: 120px; /* Küçük ekranlarda çerçeve yüksekliği */
+    }
+}
+
+/* Çok küçük ekranlar (telefonlar) */
+@media (max-width: 480px) {
+    .frames-container {
+        flex-direction: column; /* Çerçeveleri dikeyde hizalar */
+        align-items: center; /* Çerçeveleri ortalar */
+    }
+
+    .frame {
+        width: 100px; /* Çok küçük ekranlarda çerçeve genişliği */
+        height: 100px; /* Çok küçük ekranlarda çerçeve yüksekliği */
+    }
+
+    .text-section {
+        font-size: 16px; /* Metin boyutunu küçültür */
+    }
 }

@@ -1,16 +1,18 @@
+/* Çerçeveler konteyneri */
 .frames-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px 50px; /* Aralarındaki boşluğu azaltıyoruz */
+    gap: 40px 50px; /* Aralarındaki boşluk*/
     padding: 10px;
-    margin-top: 20px; /* Üstteki boşluğu azaltıyoruz */
+    margin-top: 20px; /* Üstten boşlukz */
 }
 
+/* Çerçeve */
 .frame {
     width: calc(25% - 30px); /* Çerçeveleri daha küçük yapıyoruz */
     height: 170px; /* Çerçevelerin yüksekliğini orantılı olarak küçültüyoruz */
-    border: 2px solid #506CEC; /* Kenar kalınlığını azaltıyoruz */
+    border: 2px solid #506CEC; /* Kenar kalınlığını ayarlıyoruz */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -20,19 +22,56 @@
     position: relative;
 }
 
+/* Çerçeve resimleri */
 .frame img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+/* Çerçeve etiketleri */
 .frame-label {
     position: absolute;
-    left: -120px; /* Yazıların sol taraftan çıkıntısını biraz azaltıyoruz */
+    left: -120px; /* Yazıların sol taraftan çıkıntısını ayarlıyoruz */
     top: 50%;
     transform: translateY(-50%);
-    font-size: 14px; /* Yazı boyutunu küçültüyoruz */
+    font-size: 14px; 
     text-align: center;
     color: #333;
     white-space: nowrap;
+}
+
+/* Medya sorguları */
+@media (max-width: 1200px) {
+    .frame {
+        width: calc(33.33% - 30px); /* Çerçevelerin genişliğini üçte birine düşürüyoruz */
+    }
+
+    .frame-label {
+        left: -80px; /* Etiket çıkıntısını ayarlıyoruz */
+        font-size: 12px; /* Yazı boyutunu küçültüyoruz */
+    }
+}
+
+@media (max-width: 768px) {
+    .frame {
+        width: calc(50% - 30px); /* Çerçeveleri ikiye bölüyoruz */
+    }
+
+    .frame-label {
+        left: -60px; /* Etiket çıkıntısını ayarlıyoruz */
+        font-size: 10px; /* Yazı boyutunu küçültüyoruz */
+    }
+}
+
+@media (max-width: 480px) {
+    .frame {
+        width: calc(100% - 30px); /* Çerçeveleri tam genişlikte yapıyoruz */
+        height: 150px; /* Çerçeve yüksekliğini küçültüyoruz */
+    }
+
+    .frame-label {
+        left: -40px; /* Etiket çıkıntısını ayarlıyoruz */
+        font-size: 8px; /* Yazı boyutunu küçültüyoruz */
+    }
 }

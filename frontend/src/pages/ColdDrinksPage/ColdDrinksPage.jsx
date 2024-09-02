@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Snackbar, Alert } from '@mui/material';
-import ProductModal from '../../components/ProductModal'; // Modal bileşenini içe aktar
+import ProductModal from '../../components/ProductModal'; // Modal bileşenini içe aktarma olayı
 import iceLattePic from '../../assets/mocha.jpg';
 import iceAmericanoPic from '../../assets/mocha.jpg';
 import iceFiltrePic from '../../assets/mocha.jpg';
@@ -16,7 +16,7 @@ function ColdDrinksPage() {
   const dispatch = useDispatch();
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [message, setMessage] = useState('');
-  const [selectedItem, setSelectedItem] = useState(null); // Seçilen ürünü saklamak için
+  const [selectedItem, setSelectedItem] = useState(null); // Seçilen ürünü saklamak -tutmak için
 
   const handleAddToCart = (item) => {
     dispatch({ type: 'ADD_ITEM', payload: item });

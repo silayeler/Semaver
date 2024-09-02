@@ -7,7 +7,8 @@
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    position: relative; /* Dropdown menü için referans noktası */
+    position: relative;
+    flex-wrap: wrap; /* İçeriğin sığmasını sağlar */
 }
 
 /* Logo hizalama */
@@ -18,7 +19,7 @@
     display: flex;
     align-items: center;
     top: 6%;
-    overflow: hidden; /* taşan içerik gizlemeye yarar */
+    overflow: hidden;
 }
 
 /* Logo boyutu */
@@ -27,19 +28,20 @@
     width: auto;
     object-fit: contain;
     background: linear-gradient(to right, #506CEC 50%, white 50%);
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /*sadece metnin arkaplanında görünüyor */
     color: transparent;
 }
 
-/* Sağdaki linkler */
+/* Sağdaki linkler: giriş,sepet,anasayfa */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px; /* yazılar arasındaki boşlık */
+    gap: 30px; /* yazılar arasındaki boşluk */
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    flex-wrap: nowrap; /* İçeriğin taşmasını engelle */
 }
 
 /* Linkler */
@@ -52,7 +54,7 @@
     text-decoration: none;
     margin: 0;
     line-height: 30px;
-    transition: background-color 0.3s, box-shadow 0.3s;   /* Hover Transition: Arka plan rengi ve gölge 0.3 saniyelik bir geçişle değişir.*/
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 /* İkonlar */
@@ -85,6 +87,7 @@
     color: rgba(212, 212, 212, 0.816);
 }
 
+/* Navbar listesi */
 .Header-nav ul {
     list-style: none;
     padding: 0;
@@ -93,16 +96,17 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-  
+    flex-wrap: wrap; /* İçeriğin sığmasını sağlar */
 }
 
+/* Navbar öğeleri */
 .Header-nav li {
     color: #506CEC;
     font-size: 18px;
     text-align: center;
     cursor: pointer;
     flex: 1;
-    position: relative; /* Dropdown menü için gerekli */
+    position: relative;
 }
 
 /* Aktif link için alt çizgi */
@@ -113,37 +117,79 @@
 /* Açılır menü */
 .dropdown-menu {
     display: flex;
-    flex-direction: row; /* Yatay düzenleme */
+    flex-direction: row;
     position: absolute;
-    background-color: rgba(80, 110, 236, 0.8); /* Daha saydam mavi */
+    background-color: rgba(80, 110, 236, 0.8);
     top: 100%;
     left: 0;
-    width: 200%; /* Header genişliğinde */
-    max-width: 350px; /* Maksimum genişlik ayarı */
+    width: 200%;
+    max-width: 350px;
     padding: 10px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 10;
-    border-radius: 8px; /* Köşe yuvarlama */
-    box-sizing: border-box; /* Padding ve border'ı genişlik ve yüksekliğe dahil et */
-    margin-left: 0; /* Header'dan tam genişlikte görünmesini sağlar */
-    overflow: hidden; /* Taşan içeriği gizler */
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-left: 0;
+    overflow: hidden;
 }
 
 /* Dropdown menü öğeleri */
 .dropdown-menu a {
     color: white;
-    padding: 10px 20px; /* İç boşluk */
+    padding: 10px 20px;
     text-decoration: none;
     display: block;
     text-align: center;
-    flex: 1; /* Yatay düzenlemeyi destekle */
-    margin: 0 5px; /* Öğeler arası boşluk */
-    white-space: nowrap; /* Satır sonlarını engeller */
-    overflow: visible; /* Taşan içeriği görünür yapar */
-    text-overflow: clip; /* Taşan metni kesmeden gösterir */
+    flex: 1;
+    margin: 0 5px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
 }
 
 /* Hover efekti */
 .dropdown-menu a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Medya sorguları.RESPONSIVE TASARIM */
+@media (max-width: 1200px) {
+    .logo-container {
+        position: static;
+        margin-bottom: 10px;
+        text-align: center; /* Logonun ortada görünmesini sağlar */
+    }
+
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
 }

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Snackbar, Alert } from '@mui/material';
-import ProductModal from '../../components/ProductModal'; // Modal bileşenini içe aktar
+import ProductModal from '../../components/ProductModal'; 
 import meyvePic from '../../assets/179d7a6c-c5df-445b-8f37-d6780376a383.jpg';
 
 
@@ -10,7 +10,7 @@ function FruitsPage() {
   const dispatch = useDispatch();
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [message, setMessage] = useState('');
-  const [selectedItem, setSelectedItem] = useState(null); // Seçilen ürünü saklamak için
+  const [selectedItem, setSelectedItem] = useState(null); 
 
   const handleAddToCart = (item) => {
     dispatch({ type: 'ADD_ITEM', payload: item });
