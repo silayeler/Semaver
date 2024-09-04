@@ -1,9 +1,9 @@
-## SEMAVER
+
 Staj sürecinde görev aldığım web tasarım projesi.
 
-# Semaver
 
-**Semaver**, şirket içi çalışanların kolay ve hızlı bir şekilde yiyecek-içecek siparişi verebileceği sade ve kullanışlı bir uygulamadır. Kullanıcı dostu arayüzü sayesinde çalışanlar, menüden istedikleri ürünleri seçip siparişlerini hızlıca tamamlayabilirler.
+
+**Proje**, şirket içi çalışanların kolay ve hızlı bir şekilde yiyecek-içecek siparişi verebileceği sade ve kullanışlı bir uygulamadır. Kullanıcı dostu arayüzü sayesinde çalışanlar, menüden istedikleri ürünleri seçip siparişlerini hızlıca tamamlayabilirler.
 
 ## Özellikler
 
@@ -46,9 +46,9 @@ Proje, aşağıdaki yazılım ve araçlara ihtiyaç duyar:
      ```bash
      npm start
   ## Kullanım (Usage)
-Bu bölümde, Semaver uygulamasının temel kullanım talimatları, örnekler ve varsa API dokümantasyonu yer alır.
+Bu bölümde,  uygulamanın temel kullanım talimatları, örnekler ve varsa API dokümantasyonu yer alır.
 ### Temel Kullanım Talimatları
-Semaver uygulamasını kullanmak oldukça basittir. Aşağıdaki adımları takip ederek uygulamanın temel işlevlerini kullanabilirsiniz:
+Uygulamayı kullanmak oldukça basittir. Aşağıdaki adımları takip ederek uygulamanın temel işlevlerini kullanabilirsiniz:
 1. **Giriş Yapma**
    Uygulamanızı başlattıktan sonra,kayıtlı şirket maili google hesabı giriş yapmanız gerekebilir. Giriş ekranında gerekli bilgileri girin ve oturum açın.
 2. **Menüden Ürün Seçme**
@@ -58,15 +58,15 @@ Semaver uygulamasını kullanmak oldukça basittir. Aşağıdaki adımları taki
 4. **Sipariş Durumunu Görüntüleme**
    Siparişinizin durumunu "Sepetim" bölümünden takip edebilirsiniz. Seçtiğiniz ürünler  burada güncellenir ve görüntülenir.
 ### Örnekler
-Aşağıda, Semaver uygulamasının nasıl kullanılacağına dair bazı örnekler bulunmaktadır:
+Aşağıda,uygulamanın nasıl kullanılacağına dair bazı örnekler bulunmaktadır:
 - **Ürün Seçimi Örneği**
    Bir ürün seçmek için menüden ürünü tıklayın ve "Sepete Ekle" düğmesine basın.
 - **Sipariş Onayı Örneği**
    Sepetinizdeki ürünleri kontrol ettikten sonra "Sipariş Ver" butonuna tıklayarak siparişinizi tamamlayın.
 
-### Semaver Project Structue ###
+###  Project Structue ###
 
-![Semaver Project Structure (1)](https://github.com/user-attachments/assets/de52c2eb-9e7d-4f22-affd-65c5ba98b81c)
+![ Project Structure (1)](https://github.com/user-attachments/assets/de52c2eb-9e7d-4f22-affd-65c5ba98b81c)
 
 
 ### API Dokümantasyonu
