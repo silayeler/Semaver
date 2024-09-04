@@ -63,4 +63,10 @@ Aşağıda, Semaver uygulamasının nasıl kullanılacağına dair bazı örnekl
    Bir ürün seçmek için menüden ürünü tıklayın ve "Sepete Ekle" düğmesine basın.
 - **Sipariş Onayı Örneği**
    Sepetinizdeki ürünleri kontrol ettikten sonra "Sipariş Ver" butonuna tıklayarak siparişinizi tamamlayın.
+
+### Semaver Project Structue ###
+
+![Semaver Project Structure (1)](https://github.com/user-attachments/assets/de52c2eb-9e7d-4f22-affd-65c5ba98b81c)
+
+
 ### API Dokümantasyonu
